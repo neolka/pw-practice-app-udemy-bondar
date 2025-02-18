@@ -1,0 +1,73 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="2.033031">
+<testsuite name="tests/uiComponents.spec.ts" timestamp="2025-02-18T09:04:02.743Z" hostname="chromium" tests="1" failures="1" skipped="0" time="1.44" errors="0">
+<testcase name="Form layouts page @block › radio buttons" classname="tests/uiComponents.spec.ts" time="1.44">
+<failure message="uiComponents.spec.ts:26:10 radio buttons" type="FAILURE">
+<![CDATA[  [chromium] › tests/uiComponents.spec.ts:26:10 › Form layouts page @block › radio buttons ─────────
+
+    Error: expect(locator).toHaveScreenshot(expected)
+
+      Expected an image 459px by 383px, received 461px by 383px. 683 pixels (ratio 0.01 of all image pixels) are different.
+
+    Expected: /Users/olga.perepichka/Documents/playwright-ts-udemy/pw-practice-app/tests/uiComponents.spec.ts-snapshots/Form-layouts-page-block-radio-buttons-1-chromium-darwin.png
+    Received: /Users/olga.perepichka/Documents/playwright-ts-udemy/pw-practice-app/test-results/tests-uiComponents-Form-layouts-page-block-radio-buttons-chromium/Form-layouts-page-block-radio-buttons-1-actual.png
+        Diff: /Users/olga.perepichka/Documents/playwright-ts-udemy/pw-practice-app/test-results/tests-uiComponents-Form-layouts-page-block-radio-buttons-chromium/Form-layouts-page-block-radio-buttons-1-diff.png
+
+    Call log:
+      - expect.toHaveScreenshot with timeout 5000ms
+        - verifying given screenshot expectation
+      - waiting for locator('nb-card').filter({ hasText: 'Using the Grid' })
+        - locator resolved to <nb-card _nghost-ssq-c95="" _ngcontent-ssq-c287="">…</nb-card>
+      - taking element screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - attempting scroll into view action
+        - waiting for element to be stable
+      - Expected an image 459px by 383px, received 461px by 383px. 683 pixels (ratio 0.01 of all image pixels) are different.
+      - waiting 100ms before taking screenshot
+      - waiting for locator('nb-card').filter({ hasText: 'Using the Grid' })
+        - locator resolved to <nb-card _nghost-ssq-c95="" _ngcontent-ssq-c287="">…</nb-card>
+      - taking element screenshot
+        - disabled all CSS animations
+      - waiting for fonts to load...
+      - fonts loaded
+      - attempting scroll into view action
+        - waiting for element to be stable
+      - captured a stable screenshot
+      - Expected an image 459px by 383px, received 461px by 383px. 683 pixels (ratio 0.01 of all image pixels) are different.
+
+
+      30 |         await usingTheGridForm.getByRole('radio', {name: "Option 2"}).check({force: true})
+      31 |         const radioStatus = await usingTheGridForm.getByRole('radio', {name: "Option 1"}).isChecked()
+    > 32 |         await expect(usingTheGridForm).toHaveScreenshot()
+         |                                        ^
+      33 |         // expect(radioStatus).toBeTruthy()
+      34 |         // await expect(usingTheGridForm.getByRole('radio', {name: "Option 1"})).toBeChecked()
+      35 |
+        at /Users/olga.perepichka/Documents/playwright-ts-udemy/pw-practice-app/tests/uiComponents.spec.ts:32:40
+
+    attachment #1: Form-layouts-page-block-radio-buttons-1-expected.png (image/png) ────────────────
+    tests/uiComponents.spec.ts-snapshots/Form-layouts-page-block-radio-buttons-1-chromium-darwin.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: Form-layouts-page-block-radio-buttons-1-actual.png (image/png) ──────────────────
+    test-results/tests-uiComponents-Form-layouts-page-block-radio-buttons-chromium/Form-layouts-page-block-radio-buttons-1-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: Form-layouts-page-block-radio-buttons-1-diff.png (image/png) ────────────────────
+    test-results/tests-uiComponents-Form-layouts-page-block-radio-buttons-chromium/Form-layouts-page-block-radio-buttons-1-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../tests/uiComponents.spec.ts-snapshots/Form-layouts-page-block-radio-buttons-1-chromium-darwin.png]]
+
+[[ATTACHMENT|../test-results/tests-uiComponents-Form-layouts-page-block-radio-buttons-chromium/Form-layouts-page-block-radio-buttons-1-actual.png]]
+
+[[ATTACHMENT|../test-results/tests-uiComponents-Form-layouts-page-block-radio-buttons-chromium/Form-layouts-page-block-radio-buttons-1-diff.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
