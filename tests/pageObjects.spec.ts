@@ -1,6 +1,7 @@
 import {test} from '@playwright/test'
 import {PageManager} from '../page-objects/pageManager'
 import {faker} from '@faker-js/faker'
+import { argosScreenshot } from "@argos-ci/playwright";
 
 test.beforeEach(async({page}) => {
     await page.goto('/')
@@ -37,5 +38,7 @@ test.only('testing with Argos CI', async({page}) => {
     const pm = new PageManager(page)
 
     await pm.navigateTo().formLayoutsPage()
+    await argosScreenshot(page, "form Layouts Page");
     await pm.navigateTo().dataPickerPage()
+    await argosScreenshot(page, "data Picker Page");
 })
