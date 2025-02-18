@@ -16,7 +16,7 @@ export default defineConfig<TestOptions>({
         uploadToArgos: !!process.env.CI,
 
         // Set your Argos token (required if not using GitHub Actions).
-        //token: "<YOUR-ARGOS-TOKEN>",
+        token: "argos_989a0bc1d374368a602031142b0186c7e4",
       },
     ],
     //['json', {outputFile: 'test-report/jsonReport.json'}],
@@ -29,7 +29,7 @@ export default defineConfig<TestOptions>({
 
     baseURL: 'http://localhost:4200/',
     globalsQaURL: 'https://www.globalsqa.com/demo-site/draganddrop/',
-    
+
     trace: 'on-first-retry',
     screenshot: "only-on-failure",
     video: 'off'
